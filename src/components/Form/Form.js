@@ -15,6 +15,8 @@ const Form = (Props) => {
     return (
         <>
             <form>
+                {/* Will need to fix capitalization issue on the header, later. */}
+                <h1>{Name}</h1>
                 <input onChange={(e) => handFormChange(e)} type="text" name={Name}></input>
             </form>
         </>
