@@ -1,26 +1,23 @@
 import React, { useState } from 'react'
 
-const Form = (Props) => {
-    const Name = Props.name;
-
+const Form = (props) => {
     // setFormData will store a state within formData.
     const [formData, setFormData] = useState();
 
     // A prebuilt function that triggers when forms are changed.
-    const handFormChange = (e) => {
+    const handleFormChange = (e) => {
         // The spread allows multiple States; otherwise each state will overwrite the previous.
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+        setFormData({ ...formData, [e.target.formName]: e.target.value });
     };
 
     return (
         <>
+            <h1>{props.formName}</h1>
             <form>
-                {/* Will need to fix capitalization issue on the header, later. */}
-                <h1>{Name}</h1>
-                <input onChange={(e) => handFormChange(e)} type="text" name={Name}></input>
+                <input onChange={(e) => handleFormChange(e)} type="text" formName={props.formName}></input>
             </form>
         </>
-    )
-}
+    );
+};
 
 export default Form
