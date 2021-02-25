@@ -6,7 +6,7 @@ import BSTable from './components/Table/BSTable';
 function App() {
   return (
     <div className="App">
-      <Form formName="Filter"/>
+      <Form formName="Filter" />
       {/* <BSTable /> */}
     </div>
   );

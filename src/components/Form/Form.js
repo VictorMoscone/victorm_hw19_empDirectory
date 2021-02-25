@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Form = (props) => {
     // setFormData will store a state within formData.
-    const [formData, setFormData] = useState();
+    const [formData, setFormData] = useState("");
 
     // A prebuilt function that triggers when forms are changed.
     const handleFormChange = (e) => {
         // The spread allows multiple States; otherwise each state will overwrite the previous.
-        setFormData({ ...formData, [e.target.formName]: e.target.value });
+        setFormData({ ...formData, [props.formName]: e.target.value });
     };
+
+    useEffect(() => {
+        console.log(formData.Filter)
+    }, [formData.Filter])
 
     return (
         <>
