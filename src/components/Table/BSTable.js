@@ -3,25 +3,25 @@ import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-const BSTable = (Props) => {
+const BSTable = (props) => {
     return (
         <>
             <Table striped="true" bordered="true" hover="true" responsive="md">
                 {/* This probably needs to be dynamically mapped with a # that increases. */}
                 <thead>
                     <tr>
-                    <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Male</th>
+                    <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                    <td>1</td>
-                    <td>{Props.person1.fName}</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>{props.fName}</td>
+                    <td>{props.lName}</td>
+                    <td>{props.gender}</td>
+                    <td>{props.email}</td>
                     </tr>
                     <tr>
                     <td>2</td>
