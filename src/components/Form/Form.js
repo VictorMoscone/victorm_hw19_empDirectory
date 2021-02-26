@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+// This component was originally intended to serve as a search filter. But I haven't had time to work with it.
+
 const Form = (props) => {
     // setFormData will store a state within formData.
     const [formData, setFormData] = useState("");
