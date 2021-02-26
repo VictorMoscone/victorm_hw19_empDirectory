@@ -4,6 +4,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 const BSTable = (props) => {
+
+    let tableRows = [];
+
+    for (let i = 0; i < props.trNum; i++) {
+        tableRows.push(
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td> 
+        </tr>);
+    };
+
     return (
         <>
             <Table striped="true" bordered="true" hover="true" responsive="md">
@@ -29,11 +42,7 @@ const BSTable = (props) => {
                     <td>Thornton</td>
                     <td>@fat</td>
                     </tr>
-                    <tr>
-                    <td>3</td>
-                    <td colSpan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    </tr>
+                    {tableRows}
                 </tbody>
             </Table>
         </>

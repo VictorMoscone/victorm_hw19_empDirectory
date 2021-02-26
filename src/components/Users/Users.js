@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 import axios from "axios";
-import BSTable from '../Table/BSTable';
+import TableBody from '../Table/TableBody';
 
 export default class Users extends Component {
-    state = { data: [], userSearch: "" };
-
-    onChange = function (e) {
-        this.setState({ [e.target.name]: e.target.value })
-    };
+    state = { data: [] };
 
     getRequest =  async function (e) {
         e.preventDefault();
@@ -24,9 +20,10 @@ export default class Users extends Component {
              });
         } catch (err) {
             console.log(err);
-        }
-        
+        };
     };
+
+    
 
     render() {
         return (
@@ -36,7 +33,7 @@ export default class Users extends Component {
                 </button>
                 <p>{this.state.data}</p>
 
-                <BSTable  fName={this.state.fName} lName={this.state.lName} gender={this.state.gender} email={this.state.email}/>
+                <TableBody fName={this.state.fName} lName={this.state.lName} gender={this.state.gender} email={this.state.email}/>
             </>
         );
     };
