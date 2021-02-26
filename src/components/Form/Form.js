@@ -13,7 +13,7 @@ const Form = (props) => {
     };
 
     useEffect(() => {
-        console.log(formData.Filter)
+        // console.log(formData.Filter)
     }, [formData.Filter])
 
     return (
